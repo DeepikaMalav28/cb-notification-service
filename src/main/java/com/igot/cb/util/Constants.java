@@ -71,6 +71,10 @@ public class Constants {
 
     public static final String USER_NOTIFICATION_CREATE="notification.v1.create";
     public static final String TABLE_USER_NOTIFICATION = "notifications";
+    public static final String USER_NOTIFICATION_READ_NOTIFICATIONID="notification.v1.readby.useridnotificationid";
+    public static final String USER_NOTIFICATION_READ_N_DAYSID="notification.v1.readby.ndays";
+    public static final String USER_NOTIFICATION_READ_UPDATEID="notification.v1.update.notificationid";
+    public static final  String USER_NOTIFICATION_DELETE ="notification.v1.delete.notificationid";
 
 
     // Redis

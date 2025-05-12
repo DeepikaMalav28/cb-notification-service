@@ -7,8 +7,14 @@ import java.util.List;
 
 public interface NotificationService {
 
-    SBApiResponse createNotification(JsonNode discussionDetails, String token);
-    SBApiResponse readByUserIdAndNotificationId(String notificationId,String token);
-    SBApiResponse readByUserIdAndLast30DaysNotifications(String token,int page,int size);
+    SBApiResponse createNotification(JsonNode userNotificationDetail, String token);
+
+    SBApiResponse readByUserIdAndNotificationId(String notificationId, String token);
+
+    SBApiResponse readByUserIdAndLastXDaysNotifications(String token, int days, int page, int size);
+
     SBApiResponse markNotificationsAsRead(String token, List<String> notificationIds);
+
+    SBApiResponse markNotificationsAsDeleted(String token, List<String> notificationIds);
+
 }
