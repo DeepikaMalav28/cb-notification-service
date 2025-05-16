@@ -74,6 +74,7 @@ public class NotificationServiceImpl implements NotificationService {
 
 
             JsonNode requestNode = userNotificationDetail.get(REQUEST);
+            //remove not null using optionals // stringUtiils
             if (requestNode != null && requestNode.isObject()) {
                 Iterator<Map.Entry<String, JsonNode>> fields = requestNode.fields();
                 while (fields.hasNext()) {
