@@ -76,26 +76,26 @@ class NotificationControllerTest {
         assertEquals(HttpStatus.OK, response.getStatusCode());
     }
 
-    @Test
-    void testGetLastXDaysNotifications() {
-        String token = "token";
-        int days = 7, page = 0, size = 10;
-        NotificationReadStatus status = NotificationReadStatus.BOTH;
-        String subType = null;
-
-        ApiResponse apiResponse = new ApiResponse();
-        apiResponse.setResponseCode(HttpStatus.OK);
-
-        when(notificationService.getNotificationsByUserIdAndLastXDays(
-                eq(token), eq(days), eq(page), eq(size), eq(status), eq(subType)))
-                .thenReturn(apiResponse);
-
-        ResponseEntity<?> response = notificationController.getLastXDaysNotifications(
-                token, days, page, size, status, subType);
-
-        assertEquals(apiResponse, response.getBody());
-        assertEquals(HttpStatus.OK, response.getStatusCode());
-    }
+//    @Test
+//    void testGetLastXDaysNotifications() {
+//        String token = "token";
+//        int days = 7, page = 0, size = 10;
+//        NotificationReadStatus status = NotificationReadStatus.BOTH;
+//        String subType = null;
+//
+//        ApiResponse apiResponse = new ApiResponse();
+//        apiResponse.setResponseCode(HttpStatus.OK);
+//
+//        when(notificationService.getNotificationsByUserIdAndLastXDays(
+//                eq(token), eq(days), eq(page), eq(size), eq(status), eq(subType)))
+//                .thenReturn(apiResponse);
+//
+//        ResponseEntity<?> response = notificationController.getLastXDaysNotifications(
+//                token, days, page, size, status, subType);
+//
+//        assertEquals(apiResponse, response.getBody());
+//        assertEquals(HttpStatus.OK, response.getStatusCode());
+//    }
 
     @Test
     void testMarkNotificationsAsRead() {

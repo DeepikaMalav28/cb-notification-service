@@ -1,5 +1,7 @@
 package com.igot.cb.util;
 
+import java.time.Duration;
+
 /**
  * @author Mahesh RV
  */
@@ -459,6 +461,15 @@ public class Constants {
     public static final String ENABLED = "enabled";
     public static final String SETTINGS = "settings";
     public static final String DELETED = "deleted";
+
+    public static final Duration DEFAULT_DISCUSSION_WINDOW = Duration.ofMinutes(15);
+    public static final Duration DEFAULT_NETWORK_WINDOW = Duration.ofMinutes(60);
+    public static final String DISCUSSION_ID = "discussionId";
+    public static final String NOTIFICATION_IDS = "notification_ids";
+
+    public static final String  TABLE_INDIVIDUAL_NOTIFICATION = "individual_notifications";
+
+
 
 
     private Constants() {
